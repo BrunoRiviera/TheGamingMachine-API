@@ -11,17 +11,17 @@ app.use(express.json());
 app.get (`/`, (req, res) =>{
     res.send(`API THEGAMINGMACHINE`)
 });
-// Read-- Mostrar todos los platos
+// Read-- Mostrar todos los juegos
 app.get('/games', (req, res) => {
-    Dish.find()
+    Game.find()
         .then((result) => {
             res.send(result)
         })
         .catch(err => res.status(404).send(err));
 })
 
-// Create -- Agregar Platos a la DB
-app.post('/game', (req, res) => {
+// Create -- Agregar juegos a la DB
+app.post('/games', (req, res) => {
     const game = new Game(req.body)
     game.save()
         .then(() => {
