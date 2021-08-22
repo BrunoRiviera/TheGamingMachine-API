@@ -22,10 +22,10 @@ app.get('/games', (req, res) => {
 
 // Create -- Agregar Platos a la DB
 app.post('/game', (req, res) => {
-    const dish = new Dish(req.body)
-    dish.save()
+    const game = new Game(req.body)
+    game.save()
         .then(() => {
-            res.status(201).send(dish);
+            res.status(201).send(game);
         })
         .catch((err) => {
             res.status(400).send(err);
