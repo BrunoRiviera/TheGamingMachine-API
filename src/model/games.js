@@ -22,10 +22,6 @@ const Game = mongoose.model('Game', {
         type: Number,
         required: true
     },
-    img: { 
-        type: String,
-        required: true
-    }
 });
 
 
