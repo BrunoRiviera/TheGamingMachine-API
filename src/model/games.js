@@ -25,6 +25,10 @@ const Game = mongoose.model('Game', {
     img: { 
         type: String,
         required: true
+    },
+    href: { 
+        type: String,
+        required: true
     }
 });
 
